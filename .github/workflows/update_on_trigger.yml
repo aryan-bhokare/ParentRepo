@@ -1,0 +1,14 @@
+name: Update on trigger
+
+on:
+  repository_dispatch:
+    types:
+      - update-docs
+  workflow_dispatch: 
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step
+        run: echo "Hello World from parent!"
